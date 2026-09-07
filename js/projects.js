@@ -24,8 +24,6 @@ const projects = [
       { src: 'assets/project 01/result.jpg', alt: 'Final Result of the MR environment' },
       { src: 'assets/project 01/testing.jpeg', alt: 'Testing the MR environment' },
     ],
-    github: 'https://github.com/yourusername/neon-drift',
-    demo: '',
   },
   {
     id: 'project-02',
