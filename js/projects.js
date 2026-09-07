@@ -21,7 +21,7 @@ const projects = [
       'Developed the Unity-based MR environment with interactive object spawning, hand/poke interactions, adaptive UI, and multilingual support. Designed the application architecture to support integration with the olfactive and thermal feedback device for immersive multisensory experiences.',
     images: [
       { src: 'public/assets/project 01/first test.png', alt: 'First Test of the mixed reality environment' },
-      { src: 'assets/project 01/result.jpg', alt: 'Final Result of the MR environment' },
+      { src: 'public/assets/project 01/result.jpg', alt: 'Final Result of the MR environment' },
       { src: 'assets/project 01/testing.jpeg', alt: 'Testing the MR environment' },
     ],
   },
