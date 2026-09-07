@@ -25,46 +25,6 @@ const projects = [
       { src: 'assets/project 01/testing.jpeg', alt: 'Testing the MR environment' },
     ],
   },
-  {
-    id: 'project-02',
-    title: 'Spectra',
-    category: 'MIXED REALITY',
-    year: '2023',
-    shortDescription:
-      'An augmented reality art installation for HoloLens 2 that overlays generative particle systems onto real-world surfaces, reacting to ambient sound in real time.',
-    description:
-      'Spectra transforms any physical space into a living canvas. Using HoloLens 2\'s spatial mapping, the installation detects real-world geometry and anchors dynamic particle simulations to surfaces. A microphone pipeline feeds real-time FFT audio data into a custom compute shader that drives particle behavior — louder, lower frequencies produce slower, heavier flows; high-pitched transients create explosive bursts.',
-    technologies: ['Unity', 'C#', 'HoloLens 2', 'MRTK3', 'Compute Shaders', 'HLSL', 'Spatial Audio'],
-    contribution:
-      'I built the spatial anchoring system, wrote the GPU particle compute shaders, and implemented the audio-reactive FFT pipeline that drives visual behaviour.',
-    images: [
-      { src: 'assets/images/projects/project-02/01.jpg', alt: 'Spectra — particle system overlaid on gallery wall' },
-      { src: 'assets/images/projects/project-02/02.jpg', alt: 'Spectra — close-up of audio-reactive particle burst' },
-      { src: 'assets/images/projects/project-02/03.jpg', alt: 'Spectra — visitor interacting with the installation' },
-    ],
-    github: 'https://github.com/yourusername/spectra',
-    demo: 'https://vimeo.com/yourvideo',
-  },
-  {
-    id: 'project-03',
-    title: 'Void Engine',
-    category: 'COMPUTER GRAPHICS',
-    year: '2023',
-    shortDescription:
-      'A from-scratch real-time renderer written in C++ using OpenGL, featuring physically based rendering, HDR, deferred shading, and real-time shadow mapping.',
-    description:
-      'Void Engine is a learning-driven real-time 3D renderer written entirely from scratch in C++ with OpenGL 4.6. The project implements a full deferred rendering pipeline, physically based materials with IBL (image-based lighting), cascaded shadow maps, SSAO, HDR tonemapping, and a basic scene graph. It was built to develop a deep understanding of the full graphics pipeline from vertex processing to final image output.',
-    technologies: ['C++', 'OpenGL 4.6', 'GLSL', 'PBR / IBL', 'Shadow Mapping', 'SSAO', 'HDR'],
-    contribution:
-      'Solo project — I designed the full architecture, implemented every rendering technique, and wrote all GLSL shaders.',
-    images: [
-      { src: 'assets/images/projects/project-03/01.jpg', alt: 'Void Engine — PBR material demo scene' },
-      { src: 'assets/images/projects/project-03/02.jpg', alt: 'Void Engine — shadow mapping render' },
-      { src: 'assets/images/projects/project-03/03.jpg', alt: 'Void Engine — SSAO and HDR comparison' },
-    ],
-    github: 'https://github.com/yourusername/void-engine',
-    demo: '',
-  },
 ];
 
 /* ── Render all cards ── */
