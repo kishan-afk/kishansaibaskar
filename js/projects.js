@@ -22,7 +22,7 @@ const projects = [
     images: [
       { src: 'assets/project 01/first test.png', alt: 'First Test of the mixed reality environment' },
       { src: 'assets/project 01/result.jpg', alt: 'Final Result of the MR environment' },
-      { src: 'assets/images/projects/project-01/03.jpg', alt: 'Neon Drift — overhead track view showing procedural geometry' },
+      { src: 'assets/project 01/testing.jpeg', alt: 'Testing the MR environment' },
     ],
     github: 'https://github.com/yourusername/neon-drift',
     demo: '',
