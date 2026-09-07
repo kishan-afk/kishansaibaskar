@@ -20,7 +20,7 @@ const projects = [
     contribution:
       'Developed the Unity-based MR environment with interactive object spawning, hand/poke interactions, adaptive UI, and multilingual support. Designed the application architecture to support integration with the olfactive and thermal feedback device for immersive multisensory experiences.',
     images: [
-      { src: 'assets/images/projects/project-01/01.jpg', alt: 'Neon Drift — in-game racing view, neon city at night' },
+      { src: 'assets/project 01/first test.png', alt: 'First Test of the mixed reality environment' },
       { src: 'assets/images/projects/project-01/02.jpg', alt: 'Neon Drift — vehicle close-up with glow shader' },
       { src: 'assets/images/projects/project-01/03.jpg', alt: 'Neon Drift — overhead track view showing procedural geometry' },
     ],
