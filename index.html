@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Computation &amp; Media</title>
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+<body>
+
+  <!-- Background layers -->
+  <div class="bg-grid"        aria-hidden="true"></div>
+  <div class="bg-scanlines"   aria-hidden="true"></div>
+  <div class="bg-noise"       aria-hidden="true"></div>
+  <div class="bg-vignette"    aria-hidden="true"></div>
+
+  <!-- ─── MENU TOGGLE ─── -->
+  <button class="menu-toggle" id="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-overlay">
+    <span class="menu-icon" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+    <span class="menu-label mono">MENU</span>
+  </button>
+
+  <!-- ─── NAV OVERLAY ─── -->
+  <nav class="nav-overlay" id="nav-overlay" role="navigation"
+       aria-label="Main navigation" aria-hidden="true">
+    <div class="nav-inner">
+      <div class="nav-header">
+        <span class="mono dim">// NAVIGATION</span>
+        <button class="nav-close" id="nav-close" aria-label="Close navigation">
+          <span aria-hidden="true">&#215;</span>
+        </button>
+      </div>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#home"     class="nav-link" data-section="home">
+          <span class="nav-num mono">01</span>
+          <span class="nav-text">HOME</span>
+          <span class="nav-arr" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#about"    class="nav-link" data-section="about">
+          <span class="nav-num mono">02</span>
+          <span class="nav-text">ABOUT</span>
+          <span class="nav-arr" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">
+          <span class="nav-num mono">03</span>
+          <span class="nav-text">PROJECTS</span>
+          <span class="nav-arr" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#contact"  class="nav-link" data-section="contact">
+          <span class="nav-num mono">04</span>
+          <span class="nav-text">CONTACT</span>
+          <span class="nav-arr" aria-hidden="true">→</span>
+        </a></li>
+      </ul>
+
+      <div class="nav-footer">
+        <span class="mono small dim">STATUS: <span class="accent">ONLINE</span></span>
+        <span class="nav-dot" aria-hidden="true"></span>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+  <!-- ─── MAIN ─── -->
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════════
+         HOME
+    ══════════════════════════════════════════ -->
+    <section id="home" class="section section--home" aria-label="Home">
+
+      <!-- HUD decorations -->
+      <div class="hud-layer" aria-hidden="true">
+        <div class="hud-corner hud-tl"></div>
+        <div class="hud-corner hud-tr"></div>
+        <div class="hud-corner hud-bl"></div>
+        <div class="hud-corner hud-br"></div>
+        <div class="hud-cross hud-c1"></div>
+        <div class="hud-cross hud-c2"></div>
+        <div class="hud-tag hud-tag-a mono">[48.8566°N · 2.3522°E]</div>
+        <div class="hud-tag hud-tag-b mono">[SYS::ACTIVE]</div>
+        <div class="hud-tag hud-tag-c mono">[FRAME::001]</div>
+        <div class="hud-scan-bar"></div>
+      </div>
+
+      <!-- Ticker tape -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-inner">
+          COMPUTATION · MEDIA · GAME DEVELOPMENT · MIXED REALITY · VR · COMPUTER GRAPHICS · 3D · ANIMATION · VFX · INTERACTIVE MEDIA · GENERATIVE ART · SHADERS · REAL-TIME RENDERING ·&nbsp;
+          COMPUTATION · MEDIA · GAME DEVELOPMENT · MIXED REALITY · VR · COMPUTER GRAPHICS · 3D · ANIMATION · VFX · INTERACTIVE MEDIA · GENERATIVE ART · SHADERS · REAL-TIME RENDERING ·&nbsp;
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="home-content">
+        <div class="home-label mono">
+          <span class="bracket">[</span>&nbsp;COMPUTATION &amp; MEDIA&nbsp;<span class="bracket">]</span>
+        </div>
+        <h1 class="home-name">
+          <span class="name-l1">KISHAN</span>
+          <span class="name-l2 accent">SAI BASKAR</span>
+        </h1>
+        <p class="home-intro">
+          I build at the intersection of code and creativity — crafting
+          interactive worlds, real-time graphics, and immersive media experiences.
+        </p>
+        <div class="home-cta">
+          <a href="#projects" class="btn btn--primary" data-section="projects">
+            VIEW PROJECTS <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#about" class="btn btn--ghost" data-section="about">
+            ABOUT ME
+          </a>
+        </div>
+        <div class="home-meta mono">
+          <span>EST.&nbsp;2026</span>
+          <span class="meta-dot">·</span>
+          <span>PORTFOLIO&nbsp;v1.0</span>
+          <span class="meta-dot">·</span>
+          <span id="live-time">--:--:--</span>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="mono small">SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         ABOUT
+    ══════════════════════════════════════════ -->
+    <section id="about" class="section section--about" aria-label="About me">
+      <div class="section-header">
+        <span class="section-num mono">02 /</span>
+        <h2 class="section-title">ABOUT</h2>
+        <div class="section-rule" aria-hidden="true"></div>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Bio -->
+        <div class="about-bio">
+          <div class="bio-layout">
+            <div class="bio-text-side">
+              <div class="panel-label mono">// WHO I AM</div>
+              <p class="body-text">
+                I’m a creative game developer and 3D artist passionate about game development, computer graphics, storytelling, and emerging technologies. I enjoy turning ideas into interactive experiences and exploring how visuals, technology, and narrative can come together to create something meaningful.
+              </p>
+              <p class="body-text">
+                I’m also deeply fascinated by space and space exploration, which inspires my curiosity for science, simulation, and the possibilities of technology. I’m always learning, experimenting, and looking for new ways to turn imagination into something people can experience.
+              </p>
+              <div class="status-badge mono">
+                AVAILABILITY:&nbsp;<span class="accent">OPEN TO OPPORTUNITIES</span>
+              </div>
+            </div>
+            <div class="bio-photo-side">
+              <div class="bio-photo-frame">
+                <img class="bio-photo"
+                     src="assets/images/profile.jpg"
+                     alt="Kishan Sai Baskar — portrait"
+                     loading="lazy"
+                     onerror="this.style.display='none'" />
+                <div class="bio-photo-placeholder">YOUR PHOTO HERE</div>
+              </div>
+              <div class="bio-photo-caption mono">// SUBJECT_ID: KSB-001</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="about-education">
+          <div class="panel-label mono">// EDUCATION</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="tl-year mono">2023 — 2027</div>
+              <div class="tl-role">Btech Computation &amp; Media</div>
+              <div class="tl-org mono">Mahindra University</div>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-year mono">2023</div>
+              <div class="tl-role">Class XII</div>
+              <div class="tl-org mono">Sri Seshaas Internation Public School</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="about-skills">
+          <div class="panel-label mono">// SKILLS</div>
+          <div class="skills-grid">
+            <div class="skill-cat">
+              <div class="skill-cat-title mono">GAME DEVELOPMENT</div>
+              <div class="skill-tags">
+                <span class="stag">C#</span>
+                <span class="stag">Unity</span>
+                <span class="stag">Unreal Engine</span>
+                <span class="stag">Godot</span>
+                <span class="stag">C++</span>
+              </div>
+            </div>
+            <div class="skill-cat">
+              <div class="skill-cat-title mono">COMPUTER GRAPHICS</div>
+              <div class="skill-tags">
+                <span class="stag">OpenGL</span>
+                <span class="stag">Vulkan</span>
+                <span class="stag">3D Graphics</span>
+              </div>
+            </div>
+            <div class="skill-cat">
+              <div class="skill-cat-title mono">CREATIVE TOOLS</div>
+              <div class="skill-tags">
+                <span class="stag">Blender</span>
+                <span class="stag">After Effects</span>
+                <span class="stag">Premiere Pro</span>
+                <span class="stag">Photoshop</span>
+                <span class="stag">Affinity</span>
+              </div>
+            </div>
+            <div class="skill-cat">
+              <div class="skill-cat-title mono">XR &amp; INTERACTIVE</div>
+              <div class="skill-tags">
+                <span class="stag">Mixed Reality</span>
+                <span class="stag">VR</span>
+                <span class="stag">AR</span>
+                <span class="stag">Meta Building Blocks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="about-experience">
+          <div class="panel-label mono">// EXPERIENCE</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="tl-year mono">Mar 2025 - May 2025</div>
+              <div class="tl-role">VFX Supervisor</div>
+              <div class="tl-org mono">Mahindra University Student Short Film</div>
+              <p class="tl-desc">Worked as a vfx supervisor on a student short film by taking care of visual effects and designed the title animation.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-year mono">Nov 2025</div>
+              <div class="tl-role">Built a 3D map of Mahindra University</div>
+              <div class="tl-org mono">Mahindra Univeristy</div>
+              <p class="tl-desc">Built a 3D map of Mahindra University on blender for a research conference.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-year mono">May 2026 - Aug 2026</div>
+              <div class="tl-role">Mixed Reality Intern</div>
+              <div class="tl-org mono">LIRIS Laboratory, Centrale Lyon Enise, France</div>
+              <p class="tl-desc">Developed a Mixed Reality environment with interactive elements and responsive UI for LIRIS Research Lab, France, featuring English and French localization, using meta building block and unity.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interests -->
+        <div class="about-interests">
+          <div class="panel-label mono">// INTERESTS</div>
+          <div class="interests-wrap">
+            <span class="interest">3D Modelling</span>
+            <span class="interest">Game Development</span>
+            <span class="interest">Computer graphics</span>
+            <span class="interest">Film &amp; Cinematography</span>
+            <span class="interest">Astronomy</span>
+            <span class="interest">Virtual Reality</span>
+            <span class="interest">Simulation</span>
+            <span class="interest">Character Design & Animation</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         PROJECTS
+    ══════════════════════════════════════════ -->
+    <section id="projects" class="section section--projects" aria-label="Projects">
+      <div class="section-header">
+        <span class="section-num mono">03 /</span>
+        <h2 class="section-title">PROJECTS</h2>
+        <div class="section-rule" aria-hidden="true"></div>
+      </div>
+      <!-- Cards injected by projects.js -->
+      <div class="projects-list" id="projects-list" role="list"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════════ -->
+    <section id="contact" class="section section--contact" aria-label="Contact">
+      <div class="section-header">
+        <span class="section-num mono">04 /</span>
+        <h2 class="section-title">CONTACT</h2>
+        <div class="section-rule" aria-hidden="true"></div>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-intro">
+          <div class="panel-label mono">// GET IN TOUCH</div>
+          <p class="body-text contact-body">
+            Available for freelance projects, collaborations, and full-time
+            positions. Drop a line — I read everything.
+          </p>
+        </div>
+
+        <nav class="contact-links" aria-label="Social and contact links">
+          <a href="mailto:your@email.com"
+             class="contact-link"
+             aria-label="Send email">
+            <span class="cl-label mono">EMAIL</span>
+            <span class="cl-value">kishansai1808@email.com</span>
+            <span class="cl-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://github.com/yourusername"
+             class="contact-link"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="GitHub profile (opens in new tab)">
+            <span class="cl-label mono">GITHUB</span>
+            <span class="cl-value">https://github.com/kishan-afk</span>
+            <span class="cl-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://linkedin.com/in/yourname"
+             class="contact-link"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn profile (opens in new tab)">
+            <span class="cl-label mono">LINKEDIN</span>
+            <span class="cl-value">https://www.linkedin.com/in/kishan-p-3693312b2/</span>
+            <span class="cl-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://instagram/yourname"
+             class="contact-link"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Itch.io profile (opens in new tab)">
+            <span class="cl-label mono">Instagram</span>
+            <span class="cl-value">https://www.instagram.com/kishansaibaskar/?hl=en</span>
+            <span class="cl-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        
+
+  </main>
+
+  <!-- ─── LIGHTBOX MODAL ─── -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true"
+       aria-label="Project details" aria-hidden="true">
+    <div class="modal-bg" id="modal-bg"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">
+        <span aria-hidden="true">&#215;</span>
+      </button>
+      <div class="modal-layout">
+        <div class="modal-img-side">
+          <img class="modal-img" id="modal-img" src="" alt="" loading="lazy" />
+        </div>
+        <div class="modal-info-side">
+          <div class="modal-eyebrow mono" id="modal-eyebrow"></div>
+          <h2 class="modal-title" id="modal-title"></h2>
+          <p class="modal-desc" id="modal-desc"></p>
+          <div class="modal-section" id="modal-tech-wrap">
+            <div class="panel-label mono">// TECHNOLOGIES</div>
+            <div class="modal-tags" id="modal-tags"></div>
+          </div>
+          <div class="modal-section" id="modal-contrib-wrap">
+            <div class="panel-label mono">// MY CONTRIBUTION</div>
+            <p class="modal-contrib" id="modal-contrib"></p>
+          </div>
+          <div class="modal-links-row" id="modal-links"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

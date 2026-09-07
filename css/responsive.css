@@ -1,0 +1,120 @@
+/* ============================================================
+   responsive.css — breakpoint overrides
+   xs: <480  sm: 480–767  md: 768–1023  lg: 1024–1439  xl: 1440+
+   ============================================================ */
+
+/* ── Large monitors / TV ── */
+@media (min-width: 1440px) {
+  :root {
+    --section-pad-x: clamp(7rem, 10vw, 14rem);
+  }
+  .home-content { max-width: 1000px; }
+  .about-grid { gap: 3.5rem 6rem; }
+  .contact-wrap { max-width: 860px; }
+}
+
+/* ── Tablet ── */
+@media (max-width: 1023px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bio"
+      "skills"
+      "edu"
+      "exp"
+      "interests";
+    gap: 2.5rem;
+  }
+
+  /* Stack photo under text on tablet */
+  .bio-layout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .bio-photo-side {
+    width: clamp(160px, 30vw, 200px);
+    align-self: flex-start;
+  }
+
+  .modal-layout {
+    grid-template-columns: 1fr;
+  }
+  .modal-img-side {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    min-height: 240px;
+    max-height: 340px;
+  }
+}
+
+/* ── Tablet portrait ── */
+@media (max-width: 767px) {
+  :root { --section-pad-x: clamp(1.25rem, 5vw, 2.5rem); }
+
+  /* Nav: full screen on mobile */
+  .nav-overlay {
+    width: 100%;
+    max-width: 100%;
+  }
+  .nav-inner { padding: 2rem 1.75rem; }
+  .nav-text { font-size: 2rem; }
+
+  /* Home */
+  .home-name {
+    font-size: clamp(3.5rem, 18vw, 6rem);
+  }
+  .home-cta { flex-direction: column; align-items: flex-start; }
+  .hud-tag-a { display: none; }
+  .scroll-hint { display: none; }
+
+  /* Projects */
+  .project-card-top { grid-template-columns: 1fr; }
+  .project-actions { flex-wrap: wrap; }
+
+  /* Contact */
+  .cl-value { font-size: 1rem; }
+  .contact-footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+
+  /* Modal */
+  .modal { padding: 0; align-items: flex-end; }
+  .modal-box {
+    max-height: 92svh;
+    border-left: none; border-right: none; border-bottom: none;
+  }
+  .modal-info-side { padding: 1.5rem 1.25rem; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 479px) {
+  :root { --section-pad-x: 1.25rem; }
+
+  .menu-label { display: none; }
+
+  .home-name {
+    font-size: clamp(3rem, 20vw, 4.5rem);
+  }
+  .home-intro { font-size: 0.95rem; }
+
+  .btn { padding: 0.7rem 1.2rem; font-size: 0.73rem; }
+
+  .gallery-img-wrap {
+    width: clamp(220px, 75vw, 320px);
+  }
+  .gallery-track { padding: 0.75rem 1rem; }
+  .project-card-top,
+  .project-desc,
+  .project-card-foot { padding-left: 1rem; padding-right: 1rem; }
+
+  .section-title { font-size: 1.85rem; }
+
+  .contact-link { gap: 0.8rem; }
+  .cl-label     { min-width: 3.5rem; font-size: 0.62rem; }
+  .cl-value     { font-size: 0.9rem; }
+}
+
+/* ── Touch: remove hover-only gallery buttons ── */
+@media (hover: none) {
+  .gallery-btn {
+    opacity: 1;
+  }
+}
