@@ -9,16 +9,16 @@
 const projects = [
   {
     id: 'project-01',
-    title: 'Neon Drift',
-    category: 'GAME DEVELOPMENT',
-    year: '2024',
+    title: 'MR Environment for Olfactive and Thermal Device',
+    category: 'Mixed Reality development',
+    year: 'May 2026 - Aug 2026',
     shortDescription:
-      'A synthwave-inspired racing game built in Unreal Engine 5, featuring procedurally generated track segments, real-time neon lighting, and a custom vehicle physics system.',
+      'A Mixed Reality experience for Meta Quest 3 that bridges virtual object interaction with real-world olfactory and thermal feedback.',
     description:
-      'Neon Drift is a high-speed arcade racing game set in a retro-futuristic city. The game uses Unreal Engine 5\'s Lumen global illumination to render neon-saturated environments in real time. Track segments are generated procedurally at runtime, ensuring infinite replay value. A custom vehicle physics controller was written from scratch in C++ to achieve the tight, responsive handling the game requires.',
-    technologies: ['Unreal Engine 5', 'C++', 'Lumen GI', 'Nanite', 'Blueprints', 'HLSL'],
+      'A Mixed Reality experience developed in Unity 6 for Meta Quest 3, designed as the interactive environment for an olfactive and thermal feedback device. The application allows users to interact naturally with virtual objects through hand tracking and poke interactions, with the environment designed to trigger corresponding physical sensations such as smells and temperature changes.The project features a dynamic object selection and spawning system, world-space UI, distance-based interaction, adaptive UI positioning, multilingual support using Unity Localization, and XR interaction systems built with the Meta XR SDK and OpenXR. The software architecture was designed to communicate with external sensory hardware, creating a bridge between virtual interactions and physical sensory feedback.',
+    technologies: ['Unity', 'C#', 'Meta Building Blocks', 'Quest 3'],
     contribution:
-      'I designed and implemented the procedural track generation system, wrote the vehicle physics controller, and authored all real-time shaders including the bloom, chromatic aberration, and neon glow effects.',
+      'Developed the Unity-based MR environment with interactive object spawning, hand/poke interactions, adaptive UI, and multilingual support. Designed the application architecture to support integration with the olfactive and thermal feedback device for immersive multisensory experiences.',
     images: [
       { src: 'assets/images/projects/project-01/01.jpg', alt: 'Neon Drift — in-game racing view, neon city at night' },
       { src: 'assets/images/projects/project-01/02.jpg', alt: 'Neon Drift — vehicle close-up with glow shader' },
