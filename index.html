@@ -377,9 +377,11 @@
         <span aria-hidden="true">&#215;</span>
       </button>
       <div class="modal-layout">
-        <div class="modal-img-side">
+        <div class="modal-img-side" style="position: relative;">
+          <button class="modal-nav-btn prev-btn" id="modal-prev" aria-label="Previous media">&#8592;</button>
           <img class="modal-img" id="modal-img" src="" alt="" loading="lazy" />
-          <video class="modal-img" id="modal-vid" controls style="display:none; width: 100%; height: 100%; object-fit: cover;"></video>
+          <video class="modal-img" id="modal-vid" controls style="display:none; width: 100%; height: 100%; object-fit: contain;"></video>
+          <button class="modal-nav-btn next-btn" id="modal-next" aria-label="Next media">&#8594;</button>
         </div>
         <div class="modal-info-side">
           <div class="modal-eyebrow mono" id="modal-eyebrow"></div>

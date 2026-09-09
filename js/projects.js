@@ -203,17 +203,15 @@ function setupTouchScroll(outer, _track) {
 }
 
 /* ── Modal ── */
-function openModal(project, imageIdx) {
-  const modal   = document.getElementById('modal');
-  const img     = document.getElementById('modal-img');
-  const vid     = document.getElementById('modal-vid');
-  const eyebrow = document.getElementById('modal-eyebrow');
-  const title   = document.getElementById('modal-title');
-  const desc    = document.getElementById('modal-desc');
-  const tags    = document.getElementById('modal-tags');
-  const contrib = document.getElementById('modal-contrib');
-  const links   = document.getElementById('modal-links');
+let currentProject = null;
+let currentImageIdx = 0;
 
+function updateModalMedia(project, imageIdx) {
+  currentProject = project;
+  currentImageIdx = imageIdx;
+
+  const img = document.getElementById('modal-img');
+  const vid = document.getElementById('modal-vid');
   const chosen = project.images[imageIdx] || project.images[0];
 
   const isVideo = chosen.src.match(/\.(mp4|webm|ogg)$/i);
@@ -237,6 +235,23 @@ function openModal(project, imageIdx) {
       img.onerror = function () { this.style.display = 'none'; };
     }
   }
+
+  const prevBtn = document.getElementById('modal-prev');
+  const nextBtn = document.getElementById('modal-next');
+  if (prevBtn) prevBtn.style.display = imageIdx > 0 ? 'flex' : 'none';
+  if (nextBtn) nextBtn.style.display = imageIdx < project.images.length - 1 ? 'flex' : 'none';
+}
+
+function openModal(project, imageIdx) {
+  const modal   = document.getElementById('modal');
+  const eyebrow = document.getElementById('modal-eyebrow');
+  const title   = document.getElementById('modal-title');
+  const desc    = document.getElementById('modal-desc');
+  const tags    = document.getElementById('modal-tags');
+  const contrib = document.getElementById('modal-contrib');
+  const links   = document.getElementById('modal-links');
+
+  updateModalMedia(project, imageIdx);
 
   eyebrow.textContent = `${project.category} · ${project.year}`;
   title.textContent   = project.title;
@@ -283,6 +298,20 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.getElementById('modal-close')?.addEventListener('click', closeModal);
+
+document.getElementById('modal-prev')?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (currentProject && currentImageIdx > 0) {
+    updateModalMedia(currentProject, currentImageIdx - 1);
+  }
+});
+
+document.getElementById('modal-next')?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (currentProject && currentImageIdx < currentProject.images.length - 1) {
+    updateModalMedia(currentProject, currentImageIdx + 1);
+  }
+});
 
 /* ── Helpers ── */
 function makeLink(href, label, isPrimary, extraClass = '') {

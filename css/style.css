@@ -785,9 +785,32 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
 }
 .modal-img {
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
+
+.modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10,10,10,0.85);
+  border: 1px solid var(--border);
+  color: var(--white);
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all var(--transition);
+  backdrop-filter: blur(4px);
+}
+.modal-nav-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.prev-btn { left: 1rem; }
+.next-btn { right: 1rem; }
 .modal-info-side {
   padding: 2.5rem 2rem 2rem;
   display: flex; flex-direction: column; gap: 1.25rem;
