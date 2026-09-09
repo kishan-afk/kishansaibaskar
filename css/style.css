@@ -570,10 +570,14 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
 .project-card {
   border: 1px solid var(--border);
   background: var(--bg-panel);
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
   position: relative;
 }
-.project-card:hover { border-color: var(--border-acc); }
+.project-card:hover { 
+  border-color: var(--border-acc); 
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(255, 107, 26, 0.05);
+}
 
 .project-card-top {
   display: grid; grid-template-columns: 1fr auto;

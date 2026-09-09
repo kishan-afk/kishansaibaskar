@@ -60,8 +60,10 @@
   .nav-text { font-size: 2rem; }
 
   /* Home */
+  .home-content { padding-top: 5rem; }
   .home-name {
-    font-size: clamp(3.5rem, 18vw, 6rem);
+    font-size: clamp(3rem, 16vw, 5rem);
+    word-break: break-word;
   }
   .home-cta { flex-direction: column; align-items: flex-start; }
   .hud-tag-a { display: none; }
@@ -91,7 +93,9 @@
   .menu-label { display: none; }
 
   .home-name {
-    font-size: clamp(3rem, 20vw, 4.5rem);
+    font-size: clamp(2.2rem, 14vw, 3.5rem);
+    line-height: 0.95;
+    word-break: break-word;
   }
   .home-intro { font-size: 0.95rem; }
 

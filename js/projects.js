@@ -23,6 +23,7 @@ const projects = [
       { src: 'public/assets/project 01/first test.png', alt: 'First Test of the mixed reality environment' },
       { src: 'public/assets/project 01/result.jpg', alt: 'Final Result of the MR environment' },
       { src: 'public/assets/project 01/testing.jpeg', alt: 'Testing the MR environment' },
+      { src: 'public/assets/project 01/project video.mp4', alt: 'Project video' },
     ],
   },
 ];
