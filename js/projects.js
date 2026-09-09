@@ -115,13 +115,24 @@ function createGallery(project) {
     imgWrap.setAttribute('tabindex', '0');
     imgWrap.setAttribute('aria-label', `Open image ${idx + 1}: ${img.alt}`);
 
-    const el = document.createElement('img');
-    el.src = img.src;
-    el.alt = img.alt;
-    el.loading = 'lazy';
-    el.onerror = function () {
-      this.parentNode.innerHTML = `<div class="gallery-img-placeholder">${escHtml(img.alt)}</div>`;
-    };
+    const isVideo = img.src.match(/\.(mp4|webm|ogg)$/i);
+    let el;
+    if (isVideo) {
+      el = document.createElement('video');
+      el.src = img.src;
+      el.muted = true;
+      el.loop = true;
+      el.autoplay = true;
+      el.playsInline = true;
+    } else {
+      el = document.createElement('img');
+      el.src = img.src;
+      el.alt = img.alt;
+      el.loading = 'lazy';
+      el.onerror = function () {
+        this.parentNode.innerHTML = `<div class="gallery-img-placeholder">${escHtml(img.alt)}</div>`;
+      };
+    }
 
     imgWrap.appendChild(el);
     imgWrap.addEventListener('click', () => openModal(project, idx));
@@ -195,6 +206,7 @@ function setupTouchScroll(outer, _track) {
 function openModal(project, imageIdx) {
   const modal   = document.getElementById('modal');
   const img     = document.getElementById('modal-img');
+  const vid     = document.getElementById('modal-vid');
   const eyebrow = document.getElementById('modal-eyebrow');
   const title   = document.getElementById('modal-title');
   const desc    = document.getElementById('modal-desc');
@@ -204,9 +216,27 @@ function openModal(project, imageIdx) {
 
   const chosen = project.images[imageIdx] || project.images[0];
 
-  img.src = chosen.src;
-  img.alt = chosen.alt;
-  img.onerror = function () { this.style.display = 'none'; };
+  const isVideo = chosen.src.match(/\.(mp4|webm|ogg)$/i);
+  if (isVideo) {
+    if (img) img.style.display = 'none';
+    if (img) img.src = '';
+    if (vid) {
+      vid.style.display = 'block';
+      vid.src = chosen.src;
+    }
+  } else {
+    if (vid) {
+      vid.style.display = 'none';
+      vid.src = '';
+      vid.pause();
+    }
+    if (img) {
+      img.style.display = 'block';
+      img.src = chosen.src;
+      img.alt = chosen.alt;
+      img.onerror = function () { this.style.display = 'none'; };
+    }
+  }
 
   eyebrow.textContent = `${project.category} · ${project.year}`;
   title.textContent   = project.title;
@@ -239,6 +269,7 @@ function closeModal() {
   modal.classList.remove('is-open');
   modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+  document.getElementById('modal-vid')?.pause();
 }
 
 /* Close on backdrop click */

@@ -345,6 +345,7 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
   position: relative; z-index: 2;
   max-width: 820px;
   padding-top: 2rem;
+  padding-bottom: 6rem;
 }
 .home-label {
   font-size: 0.72rem; color: var(--orange);
