@@ -5,15 +5,15 @@
 
 /* ── Custom Properties ── */
 :root {
-  --bg:         #0a0a0a;
-  --bg-2:       #0f0f0f;
-  --bg-panel:   #111111;
-  --border:     rgba(255,255,255,0.08);
+  --bg:         #ffffff;
+  --bg-2:       #fafafa;
+  --bg-panel:   #f4f4f4;
+  --border:     rgba(0,0,0,0.12);
   --border-acc: rgba(255,120,30,0.35);
 
-  --white:      #f0ede8;
-  --dim:        rgba(240,237,232,0.45);
-  --dimmer:     rgba(240,237,232,0.2);
+  --white:      #111111;
+  --dim:        rgba(17,17,17,0.65);
+  --dimmer:     rgba(17,17,17,0.4);
 
   --orange:     #ff6b1a;
   --orange-dim: rgba(255,107,26,0.18);
@@ -102,14 +102,14 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
   display: flex; align-items: center; gap: 0.7rem;
   padding: 0.55rem 1rem 0.55rem 0.65rem;
   border: 1px solid var(--border);
-  background: rgba(10,10,10,0.75);
+  background: rgba(255,255,255,0.75);
   backdrop-filter: blur(8px);
   transition: border-color var(--transition), background var(--transition);
 }
 .menu-toggle:hover,
 .menu-toggle:focus-visible {
   border-color: var(--border-acc);
-  background: rgba(15,15,15,0.9);
+  background: rgba(240,240,240,0.9);
   outline: none;
 }
 .menu-icon { display: flex; flex-direction: column; gap: 4px; }
@@ -327,7 +327,7 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
   overflow: hidden; border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 0.45rem 0;
-  background: rgba(10,10,10,0.5);
+  background: rgba(255,255,255,0.8);
 }
 .ticker-inner {
   display: inline-block; white-space: nowrap;
@@ -389,7 +389,7 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
 .btn:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
 
 .btn--primary {
-  background: var(--orange); color: #0a0a0a;
+  background: var(--orange); color: #ffffff;
   border-color: var(--orange);
   font-weight: 700;
 }
@@ -605,7 +605,7 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
 .project-link-btn:hover { border-color: var(--orange); color: var(--orange); }
 .project-link-btn.primary {
   background: var(--orange); border-color: var(--orange);
-  color: #0a0a0a; font-weight: 700;
+  color: #ffffff; font-weight: 700;
 }
 .project-link-btn.primary:hover { background: #ff8040; }
 
@@ -667,7 +667,7 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
   position: absolute; top: 50%; transform: translateY(-50%);
   z-index: 5;
   width: 2.5rem; height: 2.5rem;
-  background: rgba(10,10,10,0.85);
+  background: rgba(255,255,255,0.85);
   border: 1px solid var(--border);
   color: var(--white);
   display: flex; align-items: center; justify-content: center;
@@ -797,7 +797,7 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(10,10,10,0.85);
+  background: rgba(255,255,255,0.85);
   border: 1px solid var(--border);
   color: var(--white);
   width: 2.8rem;
@@ -836,7 +836,7 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
 }
 .modal-link:hover { border-color: var(--orange); color: var(--orange); }
 .modal-link.primary {
-  background: var(--orange); border-color: var(--orange); color: #0a0a0a; font-weight: 700;
+  background: var(--orange); border-color: var(--orange); color: #ffffff; font-weight: 700;
 }
 .modal-link.primary:hover { background: #ff8040; }
 
